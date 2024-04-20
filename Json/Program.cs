@@ -51,8 +51,7 @@ namespace Json
             File.Open(path, FileMode.OpenOrCreate).Close();
 
             string json = System.Text.Json.JsonSerializer.Serialize(humans);
-            Console.WriteLine(json);
-            Console.WriteLine(humans.Count());
+            
             File.WriteAllText(path, json);
         }
 
@@ -75,7 +74,6 @@ namespace Json
             CreateJson();
 
             List<Human> fileData = ReadBackJson();
-            Console.WriteLine(fileData[0].NickName);
         }
     }
 }
